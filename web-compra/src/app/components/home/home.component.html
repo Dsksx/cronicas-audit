@@ -1,0 +1,20 @@
+<div id="home_container">
+    <!-- <h1>Ds Books NFT Soulbound (TESTNET)</h1> -->
+    <h1>Crónicas de un marinero desahuciado</h1>
+    <p>escrito por</p>
+    <h2>Marius Mendes</h2>
+    <p>y compilado por</p>
+    <h3>Sir Javilinus Camp Roy</h3>
+    <div id="books_container">
+        <app-book *ngFor="let book of books; let i = index" [book]="book"></app-book>
+    </div>
+    <div id="bso">
+        <p>Acuña un volumen y recibe también un NFT de la B.S.O. creada por <span class="author">Aram Cape</span></p>
+        <a #link_bso target="_blank" [ngClass]="{'disabled': !bsoOwned}" href="/" class="download_bso">Descargar B.S.O.</a>
+    </div>
+    <p>SmartContracts:</p>
+    <p>Books: 0x0b93c743620A5a0afC807f08cf2e64532E6fC8A3</p>
+    <p>B.S.O.: 0xba83B007019AC9C69985B55c69487B75dCe1aDaD</p>
+    <img id="logo_bottom" src="assets/logo.webp" alt="logo" />
+</div>
+<app-welcome *ngIf="showWelcome" (closeEvent)="closePopUp()"></app-welcome>

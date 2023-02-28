@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Pirata One";
+    src: url("assets/PirataOne-Regular.ttf") format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Pirata One' !important;
+    color: #2c1600;
+    background-image: url('assets/background.webp');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#web3_access{
+    position: relative;
+
+    #web3_connect,
+    #web3_account{
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        width: 150px;
+        padding: 7px;
+        font-size: 25px;
+
+        background-color: #f9e8b9b8;
+        border-radius: 100px;
+        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+    }
+
+    #web3_connect{
+        cursor: pointer;
+    }
+}
+
+.cdk-overlay-container{
+
+    .mat-snack-bar-container{
+        padding: 7px;
+        min-height: 23px;
+
+        font-size: 25px;
+        color: #ffffffd9;
+        background-color: #ef310ee6;
+        border-radius: 100px;
+        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2);
+
+        &.top_snackbar{
+            top: 85px;
+            position: relative;
+        }
+
+        &.winner_snackbar .mat-simple-snackbar{
+            font-size: 20px !important;
+            margin-left: 25px;
+        }
+    }
+
+    .mat-simple-snackbar-action{
+        color: #ffffffd9;
+    }
+
+    .mat-simple-snackbar{
+        margin-left: 7px;
+    }
+}
+
+.mat-progress-spinner{
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 auto !important;
+
+    svg{
+        width: 20px !important;
+        height: 20px !important;
+ 
+        circle{
+            stroke: #ffffffd9 !important;
+        }
+    }
+}

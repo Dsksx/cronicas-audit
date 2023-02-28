@@ -1,0 +1,14 @@
+<div class="book">
+    <div>
+        <p class="title">{{book.title}}</p>
+        <p class="vol">{{book.volume}}</p>
+    </div>    
+    <img [src]="book.image" alt="book image" />
+    <div class="buttons">
+        <div #sign_button *ngIf="!book.owned" class="sign" (click)="signToMint()">Firmar para acuñar</div>
+        <div #mint_button *ngIf="!book.owned" class="buy hide" (click)="mint()">Acuñar por 0.1 Matic + Gas</div>
+        <a #link *ngIf="book.owned" target="_blank" class="download" (click)="download()">{{downloadTextButton}}</a>
+        <div #loader class="loader hide"><mat-spinner></mat-spinner></div>
+        <a #link_free target="_blank" class="download_free" href="{{this.book.free_link}}" download="{{this.book.title + ' - ' + this.book.volume + '.pdf'}}">Descargar sin acuñar</a>
+    </div>    
+</div>
